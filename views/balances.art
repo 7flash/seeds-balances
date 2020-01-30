@@ -1,0 +1,25 @@
+{{extend './layout.art'}}
+
+{{block 'content'}}
+    <div class="table-users">
+    <div class="header">Seeds Top Holders</div>
+    
+    <table cellspacing="0">
+        <tr>
+            <th>Avatar</th>
+            <th>Full Name</th>
+            <th>Account name</th>
+            <th>Balance</th>
+        </tr>
+
+        {{each balances}}
+            <tr>
+                <td><img src="{{ $value.image }}" alt="" /></td>
+                <td>{{ $value.nickname }}</td>
+                <td>{{ $value.account }}</td>
+                <td>{{ $value.balance }}</td>
+            </tr>
+        {{/each}}
+    </table>
+    </div>    
+{{/block}}
